@@ -6,7 +6,7 @@
 <style>
 
 *{
-	border:1px solid black;
+	border:0px solid black;
 }
 
 .container1{
@@ -63,11 +63,11 @@
 </style>
 </head>
 <body>
-<div class="container1"></div>
+<div class="container1" style="z-index:1"></div>
 <div class="wrapper row">
-	<div onmousemove="switchBackground(1)" class="produkt1 col-33 "><img onmousemove="switchBackground(1)"  src="img/plechovka1.png" alt="Smiley face" height="398px" width="281px"></div>
-	<div onmousemove="switchBackground(2)" class="produkt2 col-33 "><img src="img/plechovka1.png" alt="Smiley face" height="398px" width="281px"></div>
-	<div onmousemove="switchBackground(3)" class="produkt3 col-33 "><img src="img/plechovka1.png" alt="Smiley face" height="398px" width="281px"></div>
+	<div style="z-index:2" onmousemove="switchBackground(1)" class="produkt1 col-33 "><img onmousemove="switchBackground(1)"  src="img/plechovka1.png" alt="Smiley face" height="398px" width="281px"></div>
+	<div style="z-index:2" onmousemove="switchBackground(2)" class="produkt2 col-33 "><img src="img/plechovka1.png" alt="Smiley face" height="398px" width="281px"></div>
+	<div style="z-index:2" onmousemove="switchBackground(3)" class="produkt3 col-33 "><img src="img/plechovka1.png" alt="Smiley face" height="398px" width="281px"></div>
 </div>
 <script>
 window.switchBackground = function( id )
@@ -94,7 +94,8 @@ window.switchBackground = function( id )
               container1.style.backgroundImage = "url('img/3.png')";
         }
       container1.style.opacity = 1;
-    }, 400);
+
+    });
 }
 
 </script>
