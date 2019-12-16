@@ -9,7 +9,7 @@
 	border:1px solid black;
 }
 
-.container{
+.container1{
 		display:flex;
     background: red;
     height: 600px;
@@ -22,22 +22,18 @@
 
 	}
 
-.text-algin-center{
-	text-align: center;
-}
+
 
 .produkt1{
 	display:flex;
-	background-image: image('img/plechovka.png');
-		background-color: #fff;
+	background-image: url("img/plechovka1.png");
 	flex-flow: row wrap;
 	padding:50px;
 	justify-content: space-around;
 }
+
 .produkt2{
 	 display:flex;
-	 background-image: image('img/plechovka.png');
-	 	background-color: #fff;
 	 	flex-direction: row;
 	 flex-flow: row wrap;
 	 justify-content: space-around;
@@ -45,8 +41,6 @@
 }
 
 .produkt3{
-	background-image: image('img/plechovka.png');
-	background-color: #fff;
 	display:flex;
 	flex-direction: row;
 	flex-flow: row wrap;
@@ -61,43 +55,46 @@
 	margin:0px;
 	padding:0px;
 }
+.wrapper{
+	margin-top:-100px;
+}
 
 }
 }
 </style>
 </head>
 <body>
-<div class="container"></div>
-<div class="row">
-	<div onmousemove="switchBackground(1)" class="produkt1 col-33 text-algin-center">Set background image</div>
-	<div onmousemove="switchBackground(2)" class="produkt2 col-33 text-algin-center">Set background image</div>
-	<div onmousemove="switchBackground(3)" class="produkt3 col-33 text-algin-center">Set background image</div>
+<div class="container1"></div>
+<div class="wrapper row">
+	<div onmousemove="switchBackground(1)" class="produkt1 col-33 ">Set background image</div>
+	<div onmousemove="switchBackground(2)" class="produkt2 col-33 ">Set background image</div>
+	<div onmousemove="switchBackground(3)" class="produkt3 col-33 ">Set background image</div>
 </div>
 <script>
 window.switchBackground = function( id )
 {
-	let container = document.querySelector('div.container');
+	let container1 = document.querySelector('div.container1');
 
-    container.style.opacity = 0;
+    container1.style.opacity = 0;
 
     setTimeout(() =>
     {
     	if( id === 1 )
         {
         	//zrob taky obrazok ked je ID 1
-              container.style.backgroundImage = "url('img/1.png')";
+              container1.style.backgroundImage = "url('img/1.png')";
         }
         else if( id === 2 )
         {
                 	//zrob taky obrazok ked je ID 2
-              container.style.backgroundImage = "url('img/2.png')";
+              container1.style.backgroundImage = "url('img/2.png')";
         }
 				else if( id === 3 )
         {
                 	//zrob taky obrazok ked je ID 2
-              container.style.backgroundImage = "url('img/3.png')";
+              container1.style.backgroundImage = "url('img/3.png')";
         }
-      container.style.opacity = 1;
+      container1.style.opacity = 1;
     }, 400);
 }
 
